@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+	
+	<!-- adding my fonts  -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+	
+	<!-- adding my stylesheets  -->
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+<body>
+
+	<script src="script.js"></script>
+
+	<main>
+		<!-- this <section> element will be the entire left side of the default desktop design  -->
+		<section class="main-content">
+			<h2 class="main-content-title">Stay updated!</h2>
+			<p class="text-under-title">Join 60,000+ product managers recieving monthly updates on:</p>
+			
+			<ul>
+				<li>
+					<img class="icon-list" src="assets/images/icon-list.svg" alt="">
+					<p>Product discovery and building what matters</p>
+				</li>
+
+				<li>
+					<img class="icon-list" src="assets/images/icon-list.svg" alt="">
+					<p>Measuring to ensure updates are a success</p>
+				</li>
+
+				<li>
+					<img class="icon-list" src="assets/images/icon-list.svg" alt="">
+					<p>And much more!</p>
+				</li>
+			</ul>
+			
+			<div class="label-container">
+				<label class="label-style">Email address</label>
+			</div>
+			
+			<div class="input-container">
+			<input type='text' placeholder="email@company.com" onclick="resetLabels();">
+			</div>
+			
+			<button class="submit" onclick="checkInputs();">Subscribe to monthly newsletter</button>
+		</section>
+		
+		<!-- this <section> element will be the entire right side of the default desktop design  -->
+		<section class="main-images">
+			<img class="main-image-desktop" src="assets/images/illustration-sign-up-desktop.svg" alt="">
+			<img class="main-image-mobile" src="assets/images/illustration-sign-up-mobile.svg" alt="">
+		</section>
+	</main>
+</body>
+</html>

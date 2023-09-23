@@ -1,0 +1,275 @@
+/* setting variables */
+
+:root{
+	--darkBlue: rgb(40, 40, 60);
+	--lighterBlue: rgb(80, 80, 110);
+	--lightGrey: #D3D3D3;
+	--tomatoRed: hsl(4, 100%, 67%);
+}
+
+*{
+	z-index: 0;
+}
+
+
+
+
+
+/* CSS for defualt desktop design */
+
+body{
+		background-color: rgb(40, 40, 60);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+	}
+	
+main {
+	background-color: white;
+	width: fit-content;
+	height: fit-content;
+	border-radius: 30px;
+	display: flex;
+}
+
+p{
+	color: var(--lighterBlue);
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+}
+
+strong{
+	color: var(--lighterBlue);
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
+	font-size: 16px;
+}
+
+input{
+	border: solid 1px var(--lightGrey);
+	width: 100%;
+	padding: 20px 20px;
+	border-radius: 10px;
+	
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+}
+
+input:hover{
+	cursor: pointer;
+}
+
+input:focus{
+	border-color: black;
+	background-color: white;
+	border-color: var(--lightGrey);
+	color: black;
+}
+
+li{
+	display: flex;
+	margin-bottom: 10px;
+}
+
+.main-content, .main-images{
+	width: 50%;
+}
+
+.main-content{
+	padding: 60px 0px;
+	padding-left: 50px;
+	padding-right: 25px;
+}
+
+.main-content-title{
+	font-family: 'Roboto', sans-serif;
+	color: var(--darkBlue);
+	font-size: 54px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+.text-under-title{
+	margin-bottom: 20px;
+}
+
+.icon-list{
+	margin-right: 20px;
+}
+
+.submit{
+	color: white;
+	background-color: var(--darkBlue);
+	width: 100%;
+	padding: 20px 20px;
+	border-radius: 10px;
+	text-align: center;
+	
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	margin-top: 20px;
+}
+
+.submit:hover{
+	cursor: pointer;
+	background: linear-gradient(90deg, var(--tomatoRed), hsl(15, 100%, 55%));
+	box-shadow: 0px 20px 30px 0px hsl(4, 100%, 90%);
+}
+
+.label-container{
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+
+.label-style{
+	color: var(--darkBlue);
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	font-size: 12px;
+	
+}
+
+.main-images{
+	display: flex;
+}
+
+.main-image-desktop{
+	display: flex;
+	height: calc(100% - 30px);
+	position: relative;
+	left: 60px;
+	top: 15px;
+	align-self: center;
+}
+
+.main-image-mobile{
+	position: absolute;
+	width:0;
+	overflow:hidden;
+	z-index:-1;
+}
+
+
+
+
+
+/* CSS for if the input validation results in a fail */
+
+.fail-input{
+	background-color: hsl(4, 100%, 90%);
+	border-color: var(--tomatoRed);
+	color: var(--tomatoRed);
+}
+
+.fail-label{
+	color: var(--tomatoRed);
+}
+
+.fail-label-container{
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+
+/* CSS for if the input validation results in a success */
+
+.success-main-content{
+	width: 500px;
+	padding: 60px 60px;
+}
+
+.success-icon{
+	margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+/* mobile design CSS */
+	
+@media screen and (max-width: 550px) {
+
+body{
+	height: fit-content;
+	width: 100vw;
+}
+
+main{
+	flex-direction: column;
+	height: fit-content;
+	width: 100vw;
+	border-radius: 0px;
+}
+
+li{
+	margin-bottom: 20px;
+}
+
+p{
+	font-size: 18px;
+}
+
+
+.main-content, .main-images{
+	width: 100vw;
+	height: fit-content;;
+}
+
+.main-images{
+	order: 1;
+}
+
+.main-content{
+	order: 2;
+	
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.main-image-desktop{
+	position: absolute;
+	width:0;
+	height:0;
+	overflow:hidden;
+	z-index:-1;
+	margin:0;
+	padding:0;
+}
+
+.main-image-mobile{
+	position: static;
+	display: block;
+	width: 100%;
+	z-index: 0;
+	margin:0;
+	padding:0;
+}
+
+.main-content-title{
+	margin-bottom: 40px;
+}
+
+.text-under-title{
+	margin-bottom: 40px;
+}
+
+.label-container{
+	margin-top: 80px;
+}
+
+.submit{
+	margin-top: 50px;
+}
+
+}
+
+	
